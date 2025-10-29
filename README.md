@@ -1,75 +1,103 @@
 # 🚌 Live Bus Tracking System 
 
-A smart and efficient real-time bus tracking system powered by **Google Maps API 🗺️** for location visualization and GPS data handling. This README gives you a colorful and clear overview of the system’s structure, functionality, and setup. 🌟
+A modern, real-time bus tracking application built using **Jetpack Compose + Kotlin** on the frontend and **Spring Boot + MySQL** on the backend. The system leverages **Google Maps API 🗺️**, **Retrofit**, and REST APIs to display live bus movements, ETAs, and route analytics. 🚀
+
+---
+
+## ⚙️ Technical Stack
+
+### 🧩 Frontend (Mobile App)
+
+* **💻 Framework:** Jetpack Compose (Kotlin)
+* **🌐 API Communication:** Retrofit (REST API integration)
+* **🗺️ Map Integration:** Google Maps API for real-time map rendering
+* **🔔 Notifications:** Live updates for ETAs, delays, and route changes
+* **🎨 UI:** Material Design 3 + responsive layouts
+
+### ⚙️ Backend (Server)
+
+* **🧠 Framework:** Spring Boot (Java)
+* **🗄️ Database:** MySQL
+* **🌍 API Type:** RESTful APIs for communication between app and server
+* **📡 Live Server:** Handles real-time location updates from GPS devices
+* **🔗 Integration:** Google Maps API for route visualization and location data
 
 ---
 
 ## 🚀 Overview
 
-The **Live Bus Tracking System** leverages GPS and the **Google Maps JavaScript API** to provide real-time bus location updates. Passengers can check live routes, estimated arrival times (ETAs), and receive alerts 🚨, while transit operators monitor fleet performance and optimize routes 🧭.
+The **Live Bus Tracking System** enables passengers to view real-time bus locations, ETAs, and notifications via a user-friendly mobile interface. Transit authorities can monitor fleet performance, analyze routes, and respond quickly to issues. 🚌✨
 
 ---
 
 ## ⚙️ Core Components
 
-* **📡 GPS Module:** Captures and sends location coordinates from each bus.
-* **📲 Mobile/Data Network:** Transmits GPS data to the backend server.
-* **💻 Backend Server:** Processes bus data and communicates with Google Maps API for display.
-* **🗺️ Google Maps API:** Displays live bus movement, routes, and ETAs on an interactive map.
-* **📱 User Interface:** Web or mobile app that visualizes real-time positions, alerts, and route progress.
+* **📡 GPS Module:** Captures live bus coordinates.
+* **📲 Mobile/Data Network:** Transmits GPS data to backend.
+* **💻 Spring Boot Server:** Processes data, updates MySQL database, and exposes REST APIs.
+* **🗺️ Google Maps API:** Displays live bus positions and routes.
+* **📱 Jetpack Compose App:** Visualizes real-time data with interactive UI.
 
 ---
 
 ## 📱 Key Features
 
-* 🗺️ **Live Google Map View:** Real-time display of buses using Google Maps API.
-* ⏱️ **ETA Predictions:** Accurate bus arrival times powered by backend algorithms.
-* 🚨 **Notifications:** Alerts for breakdowns, delays, and route diversions.
-* 🔗 **API Integration:** Seamless connection with ticketing and scheduling systems.
-* 📊 **Analytics Dashboard:** Insights into driver performance and fuel usage.
+* 🗺️ **Live Map View:** Displays moving buses using Google Maps API.
+* ⏱️ **ETA Predictions:** Accurate arrival times for upcoming stops.
+* 🚨 **Alerts & Notifications:** Real-time updates for breakdowns or route changes.
+* 🔗 **Integration:** Works with ticketing and scheduling systems.
+* 📊 **Analytics:** Driver behavior and fuel usage insights.
 
 ---
 
 ## 🌍 Benefits
 
-* ✅ Reduces passenger wait times and improves experience.
-* ⚙️ Enhances operational efficiency for transport agencies.
-* 📈 Provides valuable analytics for data-driven decision-making.
-* 🛡️ Increases safety and accountability for fleet operations.
+* ✅ Reduces passenger waiting time and uncertainty.
+* ⚙️ Optimizes fleet operations and resource allocation.
+* 📈 Provides valuable performance analytics.
+* 🛡️ Increases transparency, safety, and accountability.
 
 ---
 
-## 🧠 How It Works (Simplified Architecture)
+## 🧠 Architecture Flow
 
-1. **Bus GPS Device** → Sends data via 4G/5G network.
-2. **Backend Server** → Receives GPS coordinates and updates the database.
-3. **Google Maps API** → Renders live locations and routes on the frontend.
-4. **Frontend (React / Web App)** → Fetches and displays real-time bus movements.
-
----
-
-## 🛠️ Setup & Installation
-
-1. **Clone repository:** `git clone https://example.com/live-bus-tracking.git`
-2. **Install dependencies:** `npm install`
-3. **Obtain Google Maps API key:** [Google Cloud Console](https://console.cloud.google.com/)
-4. **Set environment variable:** `GOOGLE_MAPS_API_KEY=your_api_key_here`
-5. **Run the app:** `npm start`
+1. **Bus GPS Device** → Sends location data via 4G/5G.
+2. **Spring Boot Backend** → Stores and processes location data in MySQL.
+3. **REST API** → Serves processed data to the mobile app.
+4. **Kotlin App (Jetpack Compose)** → Fetches data using Retrofit.
+5. **Google Maps API** → Visualizes bus routes and real-time positions.
 
 ---
 
+## 🛠️ Setup Instructions
 
-## 🔒 Security
+### 🔧 Backend (Spring Boot)
 
-* Use HTTPS for API communication 🔐.
-* Protect your Google Maps API key with domain restrictions.
-* Sanitize and validate all incoming GPS data.
+1. Clone the backend repo.
+2. Configure `application.properties` with MySQL credentials and Google Maps API key.
+3. Build and run: `mvn spring-boot:run`
+4. Deploy to live server for real-time access.
+
+### 📱 Frontend (Jetpack Compose)
+
+1. Add Retrofit and Google Maps dependencies in `build.gradle`.
+2. Configure REST API endpoints.
+3. Implement `MapView` using Google Maps Compose API.
+4. Run app on Android Studio.
+
+---
+
+## 🔒 Security & Best Practices
+
+* 🔐 Secure REST APIs using JWT authentication.
+* 🌐 Use HTTPS for all communications.
+* 🔑 Restrict Google Maps API key usage by domain/package name.
 
 ---
 
 ## ❤️ Contributing
 
-Contributions are welcome! Please submit pull requests and follow best practices. 🌱
+Contributions are welcome! Submit pull requests and follow the contribution guidelines. 🌱
 
 ---
 
@@ -79,4 +107,4 @@ Specify your license (e.g., MIT License).
 
 ---
 
-*Powered by Google Maps API — making every bus visible, every journey smoother!* 🌎✨
+*Built with Kotlin 💙, Spring Boot ☕, and Google Maps 🌍 — making every journey visible and reliable!* ✨
