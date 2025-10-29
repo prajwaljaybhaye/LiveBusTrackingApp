@@ -58,24 +58,6 @@ The **Live Bus Tracking System** leverages GPS and the **Google Maps JavaScript 
 
 ---
 
-## 📎 Example Code (Frontend Snippet)
-
-```javascript
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: { lat: 40.7128, lng: -74.0060 },
-  });
-
-  const busMarker = new google.maps.Marker({
-    position: { lat: 40.7128, lng: -74.0060 },
-    map,
-    title: "Bus 101 🚌",
-  });
-}
-```
-
----
 
 ## 🔒 Security
 
