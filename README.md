@@ -1,4 +1,4 @@
-# 🚌 Live Bus Tracking System (with Google Maps API)
+# 🚌 Live Bus Tracking System 
 
 A smart and efficient real-time bus tracking system powered by **Google Maps API 🗺️** for location visualization and GPS data handling. This README gives you a colorful and clear overview of the system’s structure, functionality, and setup. 🌟
 
