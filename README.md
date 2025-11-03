@@ -3,6 +3,7 @@
 A modern, real-time bus tracking application built using **Jetpack Compose + Kotlin** on the frontend and **Spring Boot + MySQL** on the backend. The system leverages **Google Maps API 🗺️**, **Retrofit**, and REST APIs to display live bus movements, ETAs, and route analytics. 🚀
 
 ---
+<img width="1588" height="2246" alt="Image" src="https://github.com/user-attachments/assets/407a2240-0e5d-4fcf-a682-7368468b5a12" />
 
 ## ⚙️ Technical Stack
 
